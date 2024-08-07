@@ -1,3 +1,10 @@
 backend/.env
 backend/node_modules
+
 frontend/node_modules
+
+srbackend/node_modules
+srbackend/.env
+
+apigateway/node_modules
+apigateway/.env

@@ -19,6 +19,11 @@ const Navbar = () => {
               Analytics
             </Link>
           </li>
+          <li>
+            <Link to="/srs" className="hover:text-blue-600">
+              Srs
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

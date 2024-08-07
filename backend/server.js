@@ -5,6 +5,7 @@ const { tempData } = require("./data");
 const router = require("./routers/escalationRouter");
 const connectDb = require("./db/db");
 const redis = require("redis");
+const PORT = 5000;
 
 connectDb();
 
@@ -30,7 +31,7 @@ app.get("/", (req, res) => {
 
 app.use(router(redisClient));
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("Listenin");
 });
 

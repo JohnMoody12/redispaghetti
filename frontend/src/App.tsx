@@ -10,6 +10,7 @@ import ProductEscalations from "./components/Escalations/ProductEscalations";
 import { DataProvider } from "./DataContext";
 import EscalationPage from "./components/Escalations/EscalationPage";
 import NewEscalation from "./components/Escalations/NewEscalation";
+import Srs from "./components/Srs";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
                 element={<NewEscalation />}
               />
               <Route path="/analytics" element={<Analytics />} />
+              <Route path="/srs" element={<Srs />} />
             </Routes>
           </main>
           <Footer />
