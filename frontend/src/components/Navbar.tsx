@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Logout from "./Logout";
 const Navbar = () => {
   return (
     <div className="bg-slate-200 min-w-[100vw] flex min-h-[5vh]">
@@ -24,6 +25,12 @@ const Navbar = () => {
               Srs
             </Link>
           </li>
+          <li>
+            <Link to="/login" className="hover:text-blue-600">
+              Login
+            </Link>
+          </li>
+          <Logout />
         </ul>
       </nav>
     </div>

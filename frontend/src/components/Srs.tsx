@@ -6,11 +6,21 @@ const Srs = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        let response = await fetch("http://localhost:5001/api/srs");
+        let response = await fetch("http://localhost:5002/api/srs", {
+          method: "GET",
+          credentials: "include",
+        });
+        if (!response.ok) throw new Error(`${response.status}`);
         let srsJson = await response.json();
+        console.log(srsJson);
         setData(srsJson);
-      } catch (err) {
-        console.log("err", err.message);
+      } catch (err: any) {
+        let no = [
+          { name: "no no no", body: "naughty naughty" },
+          { name: "no no no", body: "naughty naughty" },
+        ];
+        console.log(" are we here??");
+        setData(no);
       }
     };
 
@@ -21,11 +31,12 @@ const Srs = () => {
     <div>
       Test
       <ul>
-        {data.map((ele: any) => (
-          <li>
-            {ele.name} {ele.body}
-          </li>
-        ))}
+        {data.length > 0 &&
+          data.map((ele: any) => (
+            <li>
+              {ele.name} {ele.body}
+            </li>
+          ))}
       </ul>
     </div>
   );

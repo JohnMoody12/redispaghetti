@@ -57,7 +57,11 @@ const ProductEscalations = () => {
     const fetchEscalations = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/escalations/${productType}`
+          `http://localhost:5002/api/escalations/${productType}`,
+          {
+            method: "GET",
+            credentials: "include",
+          }
         );
         console.log(response);
         if (!response.ok) {

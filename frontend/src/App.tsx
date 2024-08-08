@@ -11,6 +11,8 @@ import { DataProvider } from "./DataContext";
 import EscalationPage from "./components/Escalations/EscalationPage";
 import NewEscalation from "./components/Escalations/NewEscalation";
 import Srs from "./components/Srs";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
               />
               <Route path="/analytics" element={<Analytics />} />
               <Route path="/srs" element={<Srs />} />
+              <Route path="/login" element={<Login />} />
             </Routes>
           </main>
           <Footer />

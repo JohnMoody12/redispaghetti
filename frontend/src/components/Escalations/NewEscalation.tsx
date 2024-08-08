@@ -21,7 +21,7 @@ const NewEscalation = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/escalations/${productType}/new`,
+        `http://localhost:5002/api/escalations/${productType}/new`,
         {
           method: "POST",
           headers: {
@@ -36,7 +36,6 @@ const NewEscalation = () => {
     } catch (err) {
       console.log(err);
     }
-    
   };
 
   return (

@@ -130,29 +130,29 @@ exports.createEscalation = async (req, res) => {
   }
 };
 
-exports.newEscalation = async (req, res) => {
-  const { productGroup } = req.params;
-  const { title, body } = req.body;
-  const id = Math.round(Math.random() * 1000000);
+// exports.newEscalation = async (req, res) => {
+//   const { productGroup } = req.params;
+//   const { title, body } = req.body;
+//   const id = Math.round(Math.random() * 1000000);
 
-  console.log(req.body);
-  let newEsc = req.body;
-  newEsc.comments = [
-    {
-      user: "bob",
-      date: "123",
-      commentBody: `this is a comment ${Math.round(Math.random() * 1000000)}`,
-      id: Math.round(Math.random() * 1000000),
-    },
-    { user: "asdfs", date: "123", commentBody: "this is a comment 4", id: 6 },
-  ];
-  let anId = +tempData[tempData.length - 1].id + 1;
-  newEsc.id = anId;
-  tempData.push(newEsc);
-  console.log(tempData);
+//   console.log(req.body);
+//   let newEsc = req.body;
+//   newEsc.comments = [
+//     {
+//       user: "bob",
+//       date: "123",
+//       commentBody: `this is a comment ${Math.round(Math.random() * 1000000)}`,
+//       id: Math.round(Math.random() * 1000000),
+//     },
+//     { user: "asdfs", date: "123", commentBody: "this is a comment 4", id: 6 },
+//   ];
+//   let anId = +tempData[tempData.length - 1].id + 1;
+//   newEsc.id = anId;
+//   tempData.push(newEsc);
+//   console.log(tempData);
 
-  res.json("YAS QUEEN");
-};
+//   res.json("YAS QUEEN");
+// };
 
 // req.redisClient.get(cacheKey, async (err, cachedData) => {
 //   if (err) {
