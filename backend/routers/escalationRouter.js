@@ -11,9 +11,7 @@ const router = express.Router();
 
 module.exports = function (redisClient) {
   router.get("/api/escalations/:productGroup", (req, res, next) => {
-    console.log(req.params.productGroup);
-    console.log(req.method);
-    console.log(req.url);
+
     req.redisClient = redisClient;
     productEscalationsMongo(req, res, next);
   });
@@ -24,3 +22,7 @@ module.exports = function (redisClient) {
   });
   return router;
 };
+
+// console.log(req.params.productGroup);
+// console.log(req.method);
+// console.log(req.url);
