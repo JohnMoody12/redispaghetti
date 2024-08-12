@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import Logout from "./Logout";
 const Navbar = () => {
   return (
-    <div className="bg-slate-200 min-w-[100vw] flex min-h-[5vh]">
+    <div className="bg-slate-400 min-w-[100vw] flex min-h-[5vh] border-solid">
       <nav>
-        <ul className="flex space-x-4 min-w-[50vw] min-h-[5vh] ml-5 text-xl items-center">
+        <ul className="text-blue-950 flex space-x-5 md:space-x-8 min-w-[70vw] min-h-[5vh] ml-5 text-xl md:text-3xl items-center">
           <li>
             <Link to="/" className="hover:text-blue-600">
               Home

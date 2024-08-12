@@ -12,7 +12,6 @@ import EscalationPage from "./components/Escalations/EscalationPage";
 import NewEscalation from "./components/Escalations/NewEscalation";
 import Srs from "./components/Srs";
 import Login from "./components/Login";
-import Logout from "./components/Logout";
 
 function App() {
   return (

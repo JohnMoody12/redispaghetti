@@ -1,19 +1,12 @@
-import { useContext, useEffect, Suspense, lazy } from "react";
+import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../../DataContext";
-import EscalationItem from "./EscalationItem";
+
 import { Link } from "react-router-dom";
 import EscalationListByProduct from "./EscalationListByProduct";
 import EscalationListEmpty from "./EmptyList";
-
-const EscList = lazy(
-  () =>
-    new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(import("./EscalationListByProduct"));
-      }, 2000);
-    })
-);
+const API_URL = import.meta.env.VITE_API_GATEWAY_URL;
+//`http://localhost:5002/api/escalations/${productType}`,
 // const tempData: Array<Escalation> = [
 //   {
 //     productGroup: "PXI",
@@ -57,7 +50,7 @@ const ProductEscalations = () => {
     const fetchEscalations = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5002/api/escalations/${productType}`,
+          `${API_URL}/api/escalations/${productType}`,
           {
             method: "GET",
             credentials: "include",
@@ -77,7 +70,7 @@ const ProductEscalations = () => {
     };
     setTimeout(() => {
       fetchEscalations();
-    }, 1000);
+    }, 500);
     //fetchEscalations();
   }, []);
   return (

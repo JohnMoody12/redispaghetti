@@ -15,7 +15,7 @@ const Srs = () => {
         console.log(srsJson);
         setData(srsJson);
       } catch (err: any) {
-        let no = [
+        let no: any = [
           { name: "no no no", body: "naughty naughty" },
           { name: "no no no", body: "naughty naughty" },
         ];

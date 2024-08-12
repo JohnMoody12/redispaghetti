@@ -1,9 +1,9 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense } from "react";
 import ComponentA from "./ComponentA";
 
 const ComponentB = lazy(
   () =>
-    new Promise((resolve) => {
+    new Promise((resolve: any) => {
       setTimeout(() => resolve(import("./ComponentB")), 3000);
     })
 );

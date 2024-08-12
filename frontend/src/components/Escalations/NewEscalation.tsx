@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+const API_URL = import.meta.env.VITE_API_GATEWAY_URL;
 
 const NewEscalation = () => {
   const { productType } = useParams<{ productType: string }>();
@@ -21,7 +22,7 @@ const NewEscalation = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5002/api/escalations/${productType}/new`,
+        `${API_URL}/api/escalations/${productType}/new`,
         {
           method: "POST",
           headers: {

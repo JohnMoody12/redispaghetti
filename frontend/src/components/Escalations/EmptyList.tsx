@@ -7,7 +7,7 @@ const EscalationListEmpty = () => {
     <div>
       {" "}
       <ul className="p-3 text-slate-100 w-100vw m:w-[50vw]">
-        {arr.map((item) => (
+        {arr.map((_item) => (
           <EmptyCard />
         ))}
       </ul>
